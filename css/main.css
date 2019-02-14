@@ -1,0 +1,36 @@
+body {
+  background: black;
+  color: #fce399;
+}
+
+.intro {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.searching {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+input {
+  width: 400px;
+  height: 35px;
+  border: 3px solid #fce399;
+  border-radius: 3px;
+}
+
+button {
+  width: 100px;
+  font-size: 15px;
+  border: 3px solid #fce399;
+  border-radius: 3px;
+  background: black;
+  color: #fce399;
+}
