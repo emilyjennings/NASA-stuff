@@ -10,14 +10,22 @@ $(document).ready(function(){
       type: "GET",
       dataType : "json",
     }).done(function(json){
-        $(".results").prepend('<img src="' + json.collection.items[0].links[0].href + '">')
-        // if("copyright" in result) {
-        //   $("#copyright").text("Image Credits: " + result.copyright);
-        // }
-        // else {
-        //   $("#copyright").text("Image Credits: " + "Public Domain");
-        // }
-        // $('.results').text(result.first)
+
+        let img = '<img src="' + json.collection.items[0].links[0].href + '">'
+        let desc = json.collection.items[0].data[0].description
+
+        if (img.includes('jpg'))
+          $(".image").html(img)
+        else {
+          for (var i =0; i < 20; i++){
+            let nextimg = json.collection.items[i].links[0].href
+            if (nextimg.includes('jpg')){
+              $(".image").html('<img src="' + nextimg + '">')
+            }
+          }
+        }
+
+        $('.desc').text(desc)
     });
 
 
