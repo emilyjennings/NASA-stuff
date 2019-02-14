@@ -34,3 +34,19 @@ button {
   background: black;
   color: #fce399;
 }
+
+.results {
+  color: #f9f1d9;
+  margin: 30px;
+}
+
+.col {
+  display: block;
+  margin: 5px auto;
+  float: left;
+  width: 50%;
+}
+
+img {
+  width: 600px;
+}
