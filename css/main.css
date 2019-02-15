@@ -41,7 +41,7 @@ button:hover {
   color: black;
 }
 
-.buttoncontainter {
+.buttoncontainer {
   display: block;
   float: left;
   width: 100%;
@@ -55,6 +55,19 @@ button:hover {
   font-size: 50px;
   border-radius: 20px;
   border-width: 10px;
+}
+
+.namegame {
+  color: #f9f8b1;
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.namegame img {
+  max-width: 200px;
 }
 
 .results {
