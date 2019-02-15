@@ -36,6 +36,27 @@ button {
   color: #fce399;
 }
 
+button:hover {
+  background-color: #f9f1d9;
+  color: black;
+}
+
+.buttoncontainter {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#playbutton {
+  width: 300px;
+  height: 150px;
+  font-size: 50px;
+  border-radius: 20px;
+  border-width: 10px;
+}
+
 .results {
   display: block;
   color: #f9f1d9;
