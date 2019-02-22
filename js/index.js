@@ -104,10 +104,16 @@ $(document).ready(function(){
 
         $('#namegameimage').prepend(img)
         $('#namegamechoices').html(
-          '<button type="button" name="button">'+ randomSpaceSearch +'</button><button type="button" name="button">' + button3 + '</button><button type="button" name="button">' + button2 + '</button>'
+          '<button type="button" name="button" id="' + randomSpaceSearch + '">'+ randomSpaceSearch +'</button><button type="button" name="button">' + button3 + '</button><button type="button" name="button">' + button2 + '</button>'
         )
         //in React, this will be an easier flow to track the buttons clicked
-        $('')
+        $('#' + randomSpaceSearch).click(function(event){
+          event.preventDefault();
+          $('#namegamechoices').html('<h1>Correct!</h1><br><button id="playagain">Play Again</button>')
+          $('#playagain').click(function(event){
+            location.reload();
+          })
+        })
       } else {
         //if the first random result isn't an image, it goes through the results to find one that is
         for (var i =0; i < 20; i++){
