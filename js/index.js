@@ -83,12 +83,15 @@ $(document).ready(function(){
       type: "GET",
       dataType : "json",
     }).done(function(json){
-
       //similar with the search function above, we need to parse out certain things from the results first
       let listlen = json.collection.items.length
+      //select a random number for the index I'll use to choose the result
       let randomNum = random(listlen)
+      //get the random result as the answer
       let randomItem = json.collection.items[randomNum]
+      //get that result's photo
       let img = '<img src="' + randomItem.links[0].href + '">'
+      //get that result's description and title
       let desc = randomItem.data[0].description //may not want to use this
       let title = randomItem.data[0].title
 
@@ -97,12 +100,14 @@ $(document).ready(function(){
         //display the image and the choices, first setting a new random variable for the buttons
         let button2 = spaceSearch[random(spaceSearch.length)]
         let button3 = spaceSearch[random(spaceSearch.length)]
+        //need to add conditionals to make sure the random buttons aren't the same as the correct answer result
 
         $('#namegameimage').prepend(img)
         $('#namegamechoices').html(
           '<button type="button" name="button">'+ randomSpaceSearch +'</button><button type="button" name="button">' + button3 + '</button><button type="button" name="button">' + button2 + '</button>'
-
         )
+        //in React, this will be an easier flow to track the buttons clicked
+        $('')
       } else {
         //if the first random result isn't an image, it goes through the results to find one that is
         for (var i =0; i < 20; i++){
